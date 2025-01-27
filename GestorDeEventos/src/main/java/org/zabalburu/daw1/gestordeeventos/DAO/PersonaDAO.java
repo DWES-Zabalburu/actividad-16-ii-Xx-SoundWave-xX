@@ -17,6 +17,5 @@ public interface PersonaDAO {
     void modificarPersona(Persona modificar);
     List<Persona> getPersonas();
     Persona getPersona(int id);
-    Persona getPersona(String dni);
-    
+    Persona getPersona(String dni);  
 }

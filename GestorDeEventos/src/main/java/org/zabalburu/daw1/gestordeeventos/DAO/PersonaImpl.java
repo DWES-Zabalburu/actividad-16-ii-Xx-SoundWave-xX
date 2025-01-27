@@ -45,6 +45,7 @@ public class PersonaImpl implements PersonaDAO {
         if (pos != -1){
             personas[pos] = modificar;
         }
+        
     }
 
     @Override
@@ -71,7 +72,7 @@ public class PersonaImpl implements PersonaDAO {
         int i;
         for (i= 0; i<numPersonas &&
                 !dni.equalsIgnoreCase(dni);i++);
-        return (i==-1)?null:personas[i];
+        return (i == numPersonas)?null:personas[i];
     }
     
     private int buscarPosicionPersona(int id){
@@ -83,5 +84,10 @@ public class PersonaImpl implements PersonaDAO {
         }else {
             return -1;
         }
+    }
+    
+    public void limpiarDatos(){
+        personas = new Persona[100];
+        numPersonas = 0;
     }
 }

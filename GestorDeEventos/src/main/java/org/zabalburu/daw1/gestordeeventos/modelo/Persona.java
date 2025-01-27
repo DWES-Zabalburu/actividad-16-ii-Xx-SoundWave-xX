@@ -12,6 +12,7 @@ import java.util.List;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  *
@@ -19,6 +20,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
+@ToString
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Persona {
     
@@ -40,7 +42,7 @@ public class Persona {
         
     }
 
-    public Persona(String nombre, String apellidos, String password, String dni, Date fechaNacimiento) {
+    public Persona(String nombre, String apellidos, String dni, String password, Date fechaNacimiento) {
         this();
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -61,9 +63,4 @@ public class Persona {
         }
         return edad >= 18;
     }
-    
-    
-    
-    
-    
 }
